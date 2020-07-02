@@ -2,7 +2,7 @@
   "name": "spacex",
   "version": "1.0.0",
   "description": "",
-  "private":"true",
+  "private": "true",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
