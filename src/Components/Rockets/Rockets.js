@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import RocketCard from './RocketCard/RocketCard';
 import './Rockets.sass';
 
 export default class Rockets extends React.Component{
@@ -27,13 +28,16 @@ export default class Rockets extends React.Component{
     }
 
     render(){
-        console.log(this.state.rockets);
         return(
             <div>
-                Hello From Rocket
-                <div>
-                    {this.state.rockets.map((rocket) => {console.log(rocket.rocket_name); return (<p> {rocket.rocket_name} </p>); })}
-                </div>
+                {this.state.rockets.map(rocket => { return (
+                <RocketCard 
+                rocketName={rocket.rocket_name} 
+                desc={ rocket.description }
+                country={ rocket.country } 
+                wikipedia= { rocket.wikipedia }
+                cost={ rocket.cost_per_launch } />
+                ); })}
             </div>
             
         )
