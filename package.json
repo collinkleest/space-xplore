@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "private": "true",
-  "homepage":"/spacex-explore",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
