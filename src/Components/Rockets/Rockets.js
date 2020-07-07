@@ -29,16 +29,15 @@ export default class Rockets extends React.Component{
 
     render(){
         return(
-            <div>
+        <div>
                 {this.state.rockets.map(rocket => { return (
                 <RocketCard 
-                rocketName={rocket.rocket_name} 
-                desc={ rocket.description }
-                country={ rocket.country } 
-                wikipedia= { rocket.wikipedia }
-                cost={ rocket.cost_per_launch } />
+                images={ rocket.flickr_images }
+                rocket={ rocket }
+                key={ rocket.id }
+                />
                 ); })}
-            </div>
+        </div>
             
         )
     }

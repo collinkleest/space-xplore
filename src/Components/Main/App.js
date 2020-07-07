@@ -2,7 +2,10 @@ import React from 'react';
 import NavElement from '../Nav/NavElement/NavElement';
 import NavBar from '../Nav/NavBar/NavBar';
 import Home from './Home';
+import Landing_Pads from '../Landing_Pads/Landing_Pads.js';
 import Rockets from '../Rockets/Rockets';
+import MapContainer from '../Landing_Pads/MapContainer.js';
+import Missions from '../Missons/Missions';
 
 export default function App(){
     
@@ -40,6 +43,8 @@ export default function App(){
             </NavBar>
             {selection === 'home' && <Home />}
             {selection === 'Rockets' && <Rockets />}
+            {selection === 'Landing Pads' && <MapContainer />}
+            {selection === 'Missions' && <Missions />}
         </div>
     );
 }
