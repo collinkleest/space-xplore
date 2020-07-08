@@ -25,7 +25,9 @@ jobs:
     - name: Installing NPM packages
       run: npm install
     - name: ESLint Check
-      run: eslint . --ext .js, .jsx, .ts, .tsx
+      uses: hallee/eslint-action@1.0.3
+      with:
+              files: src/
     - name: NPM Continous Integration test
       run: npm ci
     - name: Webpack Build to dist/
