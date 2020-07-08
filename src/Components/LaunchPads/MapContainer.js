@@ -61,6 +61,8 @@ export class MapContainer extends React.Component {
                     status={lPad.status}
                     wiki={lPad.wikipedia}
                     desc={lPad.details}
+                    siteName={lPad.site_name_long}
+                    vehicles={lPad.vehicles_launched}
                     position={{lat: lPad.location.latitude, lng: lPad.location.longitude}}>
                     </Marker>
                 );
@@ -72,13 +74,15 @@ export class MapContainer extends React.Component {
                 <h3> { this.state.selectedPlace.name }  </h3>
                 <p> <strong>Status: </strong> { this.state.selectedPlace.status } </p>
                 <p> <strong>ID: </strong> { this.state.selectedPlace.id } </p>
-                <p> <strong> { this.state.selectedPlace.lName } , { this.state.selectedPlace.region } </strong> </p>
+                <p> <strong> Location: </strong> { this.state.selectedPlace.lName } , { this.state.selectedPlace.region } </p>
+                <p> <strong> Site Name: </strong> {this.state.selectedPlace.siteName} </p>
                 <p> <strong> Successful Landings: </strong> {this.state.selectedPlace.successes}  </p>
                 <p> <strong> Attempted Landings: </strong> {this.state.selectedPlace.attempts}  </p>
                 <p> <strong> Site ID: </strong> {this.state.selectedPlace.siteId}  </p>
                 <a href={this.state.selectedPlace.wiki} target="_blank"> Wikipedia</a>
                 <p><strong>Description:</strong></p>
                 <p> { this.state.selectedPlace.desc} </p>
+                <p><strong>Vehicles Launched: </strong> {this.state.selectedPlace.vehicles} </p>
             </InfoWindow>
         </Map>
         );

@@ -59,7 +59,7 @@ export default function RocketStats(props){
                     <strong> Material: </strong> {props.rocket.landing_legs.material}
             </p>
 
-            <a href={ props.wikipedia }>
+            <a href={ props.rocket.wikipedia }>
                 {props.rocket.wikipedia}
             </a>
         </div>

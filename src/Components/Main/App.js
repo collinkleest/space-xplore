@@ -7,6 +7,7 @@ import Missions from '../Missons/Missions';
 import LandingPads from '../LandingPads/LandingPads';
 import History from '../History/History';
 import MapContainer from '../LaunchPads/MapContainer';
+import Launches from '../Launches/Launches';
 
 export default function App(){
     
@@ -40,6 +41,10 @@ export default function App(){
                 linkText="History"
                 onClick={(sel) => setSelection(sel)}
                 />
+                <NavElement
+                linkText="Launches"
+                onClick={(sel) => setSelection(sel)}
+                />
 
             </NavBar>
             {selection === 'home' && <Home />}
@@ -48,6 +53,7 @@ export default function App(){
             {selection === 'Landing Pads' && <LandingPads />}
             {selection === 'Launch Pads' && <MapContainer />}
             {selection === 'History' && <History />}
+            {selection === 'Launches' && <Launches />}
         </div>
     );
 }

@@ -59,7 +59,7 @@ export class MapContainer extends React.Component {
                 <h3> { this.state.selectedPlace.name }  </h3>
                 <p> <strong>Status: </strong> { this.state.selectedPlace.status } </p>
                 <p> <strong>ID: </strong> { this.state.selectedPlace.id } </p>
-                <p> <strong> { this.state.selectedPlace.lName } , { this.state.selectedPlace.region } </strong> </p>
+                <p> <strong> Location: </strong> { this.state.selectedPlace.lName } , { this.state.selectedPlace.region }  </p>
                 <p> <strong> Successful Landings: </strong> {this.state.selectedPlace.successes}  </p>
                 <p> <strong> Attempted Landings: </strong> {this.state.selectedPlace.attempts}  </p>
                 <p> <strong> Landing Type: </strong> {this.state.selectedPlace.type}  </p>

@@ -22,13 +22,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node_version }}
-    - name: NPM install packages
+    - name: Installing NPM packages
       run: npm install
-    - name: NPM CI test
+    - name: ESLint Check
+      run: eslint . --ext .js, .jsx, .ts, .tsx
+    - name: NPM Continous Integration test
       run: npm ci
-    - name: Webpack Build to DIST
+    - name: Webpack Build to dist/
       run: npm run build
-    - name: Deplot to gh-pages
+    - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
