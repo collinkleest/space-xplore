@@ -7,7 +7,7 @@
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "start": "webpack-dev-server --open --mode development",
-    "test":"jest"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,8 @@
   "dependencies": {
     "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-simple-maps": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",

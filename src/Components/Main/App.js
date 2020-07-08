@@ -4,6 +4,7 @@ import NavBar from '../Nav/NavBar/NavBar';
 import Home from './Home';
 import Rockets from '../Rockets/Rockets';
 import Missions from '../Missons/Missions';
+import LandingPads from '../LandingPads/LandingPads';
 
 export default function App(){
     
@@ -42,6 +43,7 @@ export default function App(){
             {selection === 'home' && <Home />}
             {selection === 'Rockets' && <Rockets />}
             {selection === 'Missions' && <Missions />}
+            {selection === 'Landing Pads' && <LandingPads />}
         </div>
     );
 }
