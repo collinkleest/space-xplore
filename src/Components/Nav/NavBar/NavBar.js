@@ -6,7 +6,13 @@ export default function NavBar(props){
         <nav className="navbar" id={props.id}>
             <ul className="navbar-nav">
                 <li>
-                    <a className="brand" href="#">SpaceX Explore</a>
+                    <a 
+                    className="brand" 
+                    href="#" 
+                    onClick={() => props.onClick('home')}
+                    >
+                        SpaceX Explore
+                    </a>
                 </li>
                 {props.children}
             </ul>

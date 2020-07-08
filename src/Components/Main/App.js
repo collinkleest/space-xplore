@@ -5,6 +5,8 @@ import Home from './Home';
 import Rockets from '../Rockets/Rockets';
 import Missions from '../Missons/Missions';
 import LandingPads from '../LandingPads/LandingPads';
+import History from '../History/History';
+import MapContainer from '../LaunchPads/MapContainer';
 
 export default function App(){
     
@@ -12,7 +14,7 @@ export default function App(){
     
     return(
         <div>
-            <NavBar> 
+            <NavBar onClick={(sel) => setSelection(sel)}> 
             
                 <NavElement 
                 linkText="Rockets"
@@ -44,6 +46,8 @@ export default function App(){
             {selection === 'Rockets' && <Rockets />}
             {selection === 'Missions' && <Missions />}
             {selection === 'Landing Pads' && <LandingPads />}
+            {selection === 'Launch Pads' && <MapContainer />}
+            {selection === 'History' && <History />}
         </div>
     );
 }
