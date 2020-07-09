@@ -33,7 +33,7 @@ class LaunchCard extends React.Component {
 
     render(){
         return(
-            <div className="launchCard-wrapper">
+            <div className="launchCard-wrapper card-wrapper">
                 <img className="launch-img" src={ this.state.launchImg } alt={ (this.props.launch.mission_name + "_img") } />
                 <h3 className="launch-title"> { this.props.launch.mission_name} </h3>
                 <p> <strong> Rocket: </strong> {this.props.launch.rocket.rocket_name} </p>

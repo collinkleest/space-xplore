@@ -6,8 +6,26 @@
 .nav-link
     text-decoration: none
     color: white
-    font-size: 12px
+    font-size: 14px
+    text-transform: uppercase
     font-family: $raleway
+    font-weight: 400
+    opacity: 0.75
 
 .nav-link:hover
-    font-weight: bold
+    opacity: 1
+    
+.nav-link:after
+    transition: 300ms
+    height: 3px
+    content: ''
+    position: relative
+    background-color: white
+
+.nav-link-ltr:after
+    width: 0%
+    bottom: -5px
+
+.nav-link-ltr:hover:after
+    width: 100%
+    display: block
