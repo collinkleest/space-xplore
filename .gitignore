@@ -10,3 +10,7 @@ package-lock.json
 
 # production 
 dist/
+
+# env
+.env
+.env.*

@@ -20,8 +20,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-simple-maps": "^2.1.2"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -31,14 +30,12 @@
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "dotenv-webpack": "^2.0.0",
     "eslint": "^7.4.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
-    "leaflet": "^1.6.0",
     "lodash": "^4.17.19",
-    "pigeon-maps": "^0.15.0",
-    "react-leaflet": "^2.7.0",
     "sass": "^1.26.9",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
