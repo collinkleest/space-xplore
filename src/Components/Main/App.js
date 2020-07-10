@@ -9,41 +9,41 @@ import History from '../History/History';
 import MapContainer from '../LaunchPads/MapContainer';
 import Launches from '../Launches/Launches';
 
-export default function App(){
-    
+export default function App() {
+
     const [selection, setSelection] = React.useState('home');
-    
-    return(
+
+    return (
         <div>
-            <NavBar onClick={(sel) => setSelection(sel)}> 
-            
-                <NavElement 
-                linkText="Rockets"
-                onClick={(sel) => setSelection(sel)}
+            <NavBar onClick={(sel) => setSelection(sel)}>
+
+                <NavElement
+                    linkText="Rockets"
+                    onClick={(sel) => setSelection(sel)}
                 />
 
                 <NavElement
-                linkText="Landing Pads"
-                onClick={(sel) => setSelection(sel)}
+                    linkText="Landing Pads"
+                    onClick={(sel) => setSelection(sel)}
                 />
 
                 <NavElement
-                linkText="Launch Pads"
-                onClick={(sel) => setSelection(sel)}
+                    linkText="Launch Pads"
+                    onClick={(sel) => setSelection(sel)}
                 />
 
                 <NavElement
-                linkText="Missions"
-                onClick={(sel) => setSelection(sel)}
+                    linkText="Missions"
+                    onClick={(sel) => setSelection(sel)}
                 />
-                
+
                 <NavElement
-                linkText="History"
-                onClick={(sel) => setSelection(sel)}
+                    linkText="History"
+                    onClick={(sel) => setSelection(sel)}
                 />
                 <NavElement
-                linkText="Launches"
-                onClick={(sel) => setSelection(sel)}
+                    linkText="Launches"
+                    onClick={(sel) => setSelection(sel)}
                 />
 
             </NavBar>

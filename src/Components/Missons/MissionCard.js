@@ -1,18 +1,27 @@
 import React from 'react';
 import './Missions.sass';
-
-export default function MissionCard(props){
-    return(
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faWikipediaW } from '@fortawesome/free-brands-svg-icons';
+export default function MissionCard(props) {
+    return (
         <div className="card-wrapper">
-            <h1 className="mission-title"> { props.mission.mission_name } </h1>
-            <p className="desc"> {props.mission.description} </p> 
-            <p> <strong> Manufacturers: </strong></p>
-            <ul> {props.mission.manufacturers.map( (company) => {return (<li>{ company }</li>) })} </ul>
-            <p> <strong> Payload ID List: </strong></p>
-            <ul> {props.mission.payload_ids.map( (pID) => {return (<li> { pID }</li>) })}</ul>
-            <p> <a className="link" href={props.mission.wikipedia}> Wikipedia </a> </p>
-            <p> <a className="link" href={props.mission.website}> Website </a> </p>
-            <p> <a className="link" href={props.mission.twitter}> Twitter </a> </p>
+            <h1 className="mission-title"> {props.mission.mission_name} </h1>
+            <p> <b>Mission ID: </b> {props.mission.mission_id} </p>
+            <p className="desc"> {props.mission.description} </p>
+            <p> <b> Manufacturers: </b></p>
+            <ul> {props.mission.manufacturers.map((company) => { return (<li>{company}</li>) })} </ul>
+            <p> <b> Payload ID List: </b></p>
+            <ul> {props.mission.payload_ids.map((pID) => { return (<li> {pID}</li>) })}</ul>
+            <a className="icon-link" target="_blank" href={props.mission.wikipedia}>
+                <FontAwesomeIcon className="icon" icon={faWikipediaW} />
+            </a>
+            <a className="icon-link" target="_blank" href={props.mission.website}>
+                <FontAwesomeIcon className="icon" icon={faRocket} />
+            </a>
+            <a className="icon-link" target="_blank" href={props.mission.twitter}>
+                <FontAwesomeIcon className="icon" icon={faTwitter} />
+            </a>
         </div>
     );
 }

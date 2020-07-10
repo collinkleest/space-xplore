@@ -6,7 +6,8 @@ export default function NavElement(props){
         <li className="nav-element">
             <a href={props.href} 
             className="nav-link nav-link-ltr"
-            onClick={() => props.onClick(props.linkText)}>
+            onClick={() => {props.onClick(props.linkText); 
+            document.getElementById('nav-links').classList.toggle('openNav');}}>
                 {props.linkText}
             </a>
         </li>
