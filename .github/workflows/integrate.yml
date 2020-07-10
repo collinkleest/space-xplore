@@ -27,7 +27,7 @@ jobs:
     - name: NPM Continous Integration test
       run: npm ci
     - name: Webpack Build to dist/
-      run: npm run build --env.GOOGLE_API_KEY=${{secrets.GOOGLE_API_KEY}} 
+      run: ./node_modules/webpack/bin/webpack.js --mode production --env.GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
