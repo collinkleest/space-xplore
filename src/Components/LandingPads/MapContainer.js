@@ -32,7 +32,6 @@ export class MapContainer extends React.Component {
     }
 
     render() {
-        console.log(process.env.GOOGLE_API_KEY);
         return (
             <Map google={this.props.google} zoom={4} onClick={this.onMapClicked}>
                 {this.props.landingPads.map(lPad => {
