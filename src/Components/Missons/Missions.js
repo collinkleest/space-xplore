@@ -5,7 +5,7 @@ import MissionCard from './MissionCard';
 
 class Missions extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             missions: []
@@ -13,24 +13,24 @@ class Missions extends React.Component {
         this.getMissions = this.getMissions.bind(this)
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getMissions();
     }
 
-    getMissions(){
+    getMissions() {
         Axios.get("https://api.spacexdata.com/v3/missions")
-        .then( res =>  {
-            this.setState({missions: res.data})
-        })
-        .catch( error => {
-            console.log(error);
-        })
+            .then(res => {
+                this.setState({ missions: res.data })
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
-    render(){
-        return(
-            <div>
-                {this.state.missions.map( mis => { return( <MissionCard mission={mis} /> ); })}
+    render() {
+        return (
+            <div className="main-wrapper">
+                {this.state.missions.map(mis => { return (<MissionCard mission={mis} />); })}
             </div>
         );
     }

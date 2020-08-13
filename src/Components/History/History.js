@@ -30,26 +30,28 @@ class History extends React.Component {
     render() {
 
         return (
-            this.state.history.map((his) => {
-                return (
-                    <div key={his.id} className="card-wrapper">
-                        <h1> {his.title} </h1>
-                        <p> <strong><FontAwesomeIcon icon={faCalendar} /></strong> {new Date(his.event_date_utc).toDateString()} </p>
-                        <p> <strong>Flight Number: </strong> {his.flight_number} </p>
-                        <p><strong>Details: </strong></p>
-                        <p>{his.details}</p>
-                        <a className="icon-link" target="_blank" href={his.links.article}>
-                            <FontAwesomeIcon className="icon" icon={faNewspaper} />
-                        </a>
-                        <a className="icon-link" target="_blank" href={his.links.reddit}>
-                            <FontAwesomeIcon className="icon" icon={faReddit} />
-                        </a>
-                        <a className="icon-link" target="_blank" href={his.links.wikipedia}>
-                            <FontAwesomeIcon className="icon" icon={faWikipediaW} />
-                        </a>
-                    </div>
-                );
-            })
+            <div className="main-wrapper">
+                {this.state.history.map((his) => {
+                    return (
+                        <div key={his.id} className="card-wrapper">
+                            <h1> {his.title} </h1>
+                            <p> <strong><FontAwesomeIcon icon={faCalendar} /></strong> {new Date(his.event_date_utc).toDateString()} </p>
+                            <p> <strong>Flight Number: </strong> {his.flight_number} </p>
+                            <p><strong>Details: </strong></p>
+                            <p>{his.details}</p>
+                            <a className="icon-link" target="_blank" href={his.links.article}>
+                                <FontAwesomeIcon className="icon" icon={faNewspaper} />
+                            </a>
+                            <a className="icon-link" target="_blank" href={his.links.reddit}>
+                                <FontAwesomeIcon className="icon" icon={faReddit} />
+                            </a>
+                            <a className="icon-link" target="_blank" href={his.links.wikipedia}>
+                                <FontAwesomeIcon className="icon" icon={faWikipediaW} />
+                            </a>
+                        </div>
+                    );
+                })}
+            </div>
         );
     }
 

@@ -3,42 +3,44 @@ import Axios from 'axios';
 import RocketCard from './RocketCard/RocketCard';
 import './Rockets.sass';
 
-export default class Rockets extends React.Component{
+export default class Rockets extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             rockets: []
         }
         this.getRockets = this.getRockets.bind(this);
     }
-    
-    componentDidMount(){
+
+    componentDidMount() {
         this.getRockets();
     }
 
-    getRockets(){
+    getRockets() {
         Axios.get('https://api.spacexdata.com/v3/rockets')
-        .then( (response) => {
-            this.setState({rockets: response.data});
-        })
-        .catch( (error) => {
-            console.log(error);
-        } )
+            .then((response) => {
+                this.setState({ rockets: response.data });
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
 
-    render(){
-        return(
-        <div>
-                {this.state.rockets.map(rocket => { return (
-                <RocketCard 
-                images={ rocket.flickr_images }
-                rocket={ rocket }
-                key={ rocket.id }
-                />
-                ); })}
-        </div>
-            
+    render() {
+        return (
+            <div className="main-wrapper">
+                {this.state.rockets.map(rocket => {
+                    return (
+                        <RocketCard
+                            images={rocket.flickr_images}
+                            rocket={rocket}
+                            key={rocket.id}
+                        />
+                    );
+                })}
+            </div>
+
         )
     }
 

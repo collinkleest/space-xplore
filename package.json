@@ -38,6 +38,8 @@
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "lodash": "^4.17.19",
+    "react-lazy-load": "^3.1.13",
+    "react-lazyload": "^3.0.0",
     "sass": "^1.26.9",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
