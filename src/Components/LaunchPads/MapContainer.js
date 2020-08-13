@@ -46,7 +46,7 @@ export class MapContainer extends React.Component {
 
     render() {
         return (
-            <Map google={this.props.google} zoom={3} onClick={this.onMapClicked}>
+            <Map google={this.props.google} zoom={3} onClick={this.onMapClicked} className="maps">
                 {this.state.launchPads.map(lPad => {
                     return (
                         <Marker

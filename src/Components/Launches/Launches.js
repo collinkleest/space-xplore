@@ -43,9 +43,6 @@ class Launches extends React.Component {
           onClose={() => {
             this.setState({ displayMoreInfo: !this.state.displayMoreInfo });
           }}
-          //   onClose={this.setState({
-          //     displayMoreInfo: !this.state.displayMoreInfo,
-          //   })}
         />
       );
     } else {
@@ -53,17 +50,19 @@ class Launches extends React.Component {
     }
 
     return (
-      <div className="launches-wrapper">
-        {this.state.launches.map((launch) => {
-          return (
-            <LaunchCard
-              key={launch.flight_number}
-              launch={launch}
-              onClick={this.showMoreInfo}
-            />
-          );
-        })}
-        {moreInfoLaunch}
+      <div className="main-wrapper">
+        <div className="launches-wrapper">
+          {this.state.launches.map((launch) => {
+            return (
+              <LaunchCard
+                key={launch.flight_number}
+                launch={launch}
+                onClick={this.showMoreInfo}
+              />
+            );
+          })}
+          {moreInfoLaunch}
+        </div>
       </div>
     );
   }
