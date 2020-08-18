@@ -1,6 +1,8 @@
+/** @format */
+
 import React from "react";
 import "./Launches.sass";
-import CustomBtn from "./CustomBtn";
+import PropTypes from "prop-types";
 
 export default function MoreInfo(props) {
   let rocket = props.launch.rocket;
@@ -18,23 +20,25 @@ export default function MoreInfo(props) {
     <div className="launches-modal-wrapper">
       <span className="modal-close" onClick={props.onClose}>
         &times;
-        </span>
+      </span>
       <h1 className="modal-title">{props.launch.mission_name}</h1>
-      <div className="img-container">
+      <hr className="modal-line" />
+      <div className="d-flex flex-wrap">
         {!_.isEmpty(imgArray) &&
           imgArray.map((image, index) => {
-            return <img src={image} key={index} className="card-img"></img>;
+            return <img src={image} key={index} className="modal-img"></img>;
           })}
       </div>
-      <p>
-        <strong>Details:</strong>
-        {props.launch.details}
-      </p>
+      <hr className="modal-line" />
+      <h1 className="display-4 text-center">
+        About {props.launch.mission_name}
+      </h1>
+      <p>{props.launch.details}</p>
       <p>
         <strong>Date: </strong>
-        {new Date(props.launch.event_date_utc).toDateString()}
+        {new Date(props.launch.launch_date_utc).toDateString()}
       </p>
-      <h3>
+      <h3 className="display-4 text-center">
         <b>Rocket: </b>
       </h3>
       <p>
@@ -45,16 +49,11 @@ export default function MoreInfo(props) {
         <b>Rokcet Type: </b>
         {rocket.rocket_type} <br />
       </p>
-      <p>
-        <b> Cores: </b>
-      </p>
       <div onClick={props.onClose}>
-        <CustomBtn
-          text="Close"
-          color="transparent"
-          borderColor="black"
-        />
+        <button className="btn btn-dark">Close</button>
       </div>
     </div>
   );
 }
+
+MoreInfo.propTypes = { launch: PropTypes.object, onClose: PropTypes.func };

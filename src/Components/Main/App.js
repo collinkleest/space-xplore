@@ -1,6 +1,5 @@
 import React from "react";
-import NavElement from "../Nav/NavElement/NavElement";
-import NavBar from "../Nav/NavBar/NavBar";
+import Navigation from '../Nav';
 import Home from "./Home";
 import Rockets from "../Rockets/Rockets";
 import Missions from "../Missons/Missions";
@@ -8,50 +7,13 @@ import LandingPads from "../LandingPads/LandingPads";
 import History from "../History/History";
 import MapContainer from "../LaunchPads/MapContainer";
 import Launches from "../Launches/Launches";
-import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 export default function App() {
-  const [selection, setSelection] = React.useState("home");
-
   return (
     <div>
       <HashRouter>
-        <NavBar onClick={(sel) => setSelection(sel)}>
-          <NavElement
-            linkText="Rockets"
-            relativePath="/rockets"
-            onClick={(sel) => setSelection(sel)}
-          />
-
-          <NavElement
-            linkText="Landing Pads"
-            relativePath="/landing-pads"
-            onClick={(sel) => setSelection(sel)}
-          />
-
-          <NavElement
-            linkText="Launch Pads"
-            relativePath="/launch-pads"
-            onClick={(sel) => setSelection(sel)}
-          />
-
-          <NavElement
-            linkText="Missions"
-            relativePath="/missions"
-            onClick={(sel) => setSelection(sel)}
-          />
-
-          <NavElement
-            linkText="History"
-            relativePath="/history"
-            onClick={(sel) => setSelection(sel)}
-          />
-          <NavElement
-            linkText="Launches"
-            relativePath="/launches"
-            onClick={(sel) => setSelection(sel)}
-          />
-        </NavBar>
+        <Navigation />
         <Switch>
           <Route exact path="/">
             <Home />

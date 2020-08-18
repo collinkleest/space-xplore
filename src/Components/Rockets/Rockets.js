@@ -1,6 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
-import RocketCard from './RocketCard/RocketCard';
+import RocketCard from './RocketCard';
 import './Rockets.sass';
 
 export default class Rockets extends React.Component {
@@ -35,7 +35,7 @@ export default class Rockets extends React.Component {
                         <RocketCard
                             images={rocket.flickr_images}
                             rocket={rocket}
-                            key={rocket.id}
+                            key={rocket.rocket_id}
                         />
                     );
                 })}

@@ -1,4 +1,6 @@
-import React from "react";
+/** @format */
+
+import React, { Fragment } from "react";
 import Axios from "axios";
 import LaunchCard from "./LaunchCard";
 import MoreInfo from "./MoreInfo";
@@ -50,20 +52,22 @@ class Launches extends React.Component {
     }
 
     return (
-      <div className="main-wrapper">
-        <div className="launches-wrapper">
-          {this.state.launches.map((launch) => {
-            return (
-              <LaunchCard
-                key={launch.flight_number}
-                launch={launch}
-                onClick={this.showMoreInfo}
-              />
-            );
-          })}
-          {moreInfoLaunch}
+      <Fragment>
+        <div className="main-wrapper mt-5">
+          <div className="d-flex flex-wrap">
+            {this.state.launches.map((launch) => {
+              return (
+                <LaunchCard
+                  key={launch.flight_number}
+                  launch={launch}
+                  onClick={this.showMoreInfo}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
+        <div className="mx-auto">{moreInfoLaunch}</div>
+      </Fragment>
     );
   }
 }
