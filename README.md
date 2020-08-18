@@ -3,11 +3,11 @@
 <center><img src="./src/assets/react-spacex.png" height="200px" /></center>
 
 ### Live Demo
-#### https://collinkleest.github.io/spacex-explore
+#### https://collinkleest.github.io/space-xplore
 
 ## Installation
 
-Make sure you have nodejs installed
+Make sure you have [nodejs](https://nodejs.org/en/download/) installed
 
 Clone the repo and change directory into it
 ```bash
