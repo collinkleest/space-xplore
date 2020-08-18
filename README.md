@@ -1,4 +1,4 @@
-# spacex-explore
+# space-xplore
 
 <center><img src="./src/assets/react-spacex.png" height="200px" /></center>
 
