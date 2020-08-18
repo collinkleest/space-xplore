@@ -11,7 +11,7 @@ Make sure you have nodejs installed
 
 Clone the repo and change directory into it
 ```bash
-git clone https://github.com/collinkleest/spacex-explore
+git clone https://github.com/collinkleest/space-xplore
 cd spacex-explore/
 ```
 
